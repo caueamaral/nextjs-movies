@@ -1,16 +1,13 @@
-import Image from "next/image";
+import Header from "./components/Header";
+import Banner from "./components/Banner";
 
 export default function Home() {
   return (
     <>
-      <Image
-        src="/images/logo-movizone.svg"
-        alt="MoviZone logo"
-        width={154}
-        height={22}
-        priority
-      />
-      <main className=""></main>
+      <Header />
+      <main>
+        <Banner />
+      </main>
     </>
   );
 }
