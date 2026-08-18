@@ -3,6 +3,8 @@
 :root {
   --background: #1E1E1E;
   --foreground: #fff;
+  --headerHeight: 76px;
+  --headerMargin: 24px;
 }
 
 body {
