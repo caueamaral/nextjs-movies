@@ -7,8 +7,10 @@ const List = styled.ul`
 `;
 
 const NavLink = styled(Link)`
+  color: var(--navigationLink);
+
   &:hover {
-    color: var(--red);
+    color: var(--navigationHover);
   }
 `;
 

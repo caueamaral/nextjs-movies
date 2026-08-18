@@ -5,7 +5,8 @@
   --foreground: #fff;
   --headerHeight: 76px;
   --headerMargin: 24px;
-  --red: #ff4c4c;
+  --navigationLink: #cbcbcb;
+  --navigationHover: #ff4c4c;
 }
 
 body {
