@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Logo from "@/app/components/Logo";
+import Navigation from "@/app/components/Navigation";
+import Login from "@/app/components/Login";
 
 const HeaderContainer = styled.header`
   padding-inline: 24px;
@@ -8,9 +10,11 @@ const HeaderContainer = styled.header`
 `;
 
 const HeaderLimit = styled.div`
+  align-items: center;
   background: color-mix(in srgb, #151515 90%, transparent);
   border-radius: 8px;
   display: flex;
+  justify-content: space-between;
   height: var(--headerHeight);
   margin-top: var(--headerMargin);
   margin-inline: auto;
@@ -24,6 +28,8 @@ export default function Header() {
     <HeaderContainer>
       <HeaderLimit>
         <Logo />
+        <Navigation />
+        <Login />
       </HeaderLimit>
     </HeaderContainer>
   );
