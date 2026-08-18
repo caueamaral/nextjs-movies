@@ -7,7 +7,7 @@ const List = styled.ul`
 `;
 
 const NavLink = styled(Link)`
-  color: var(--navigationLink);
+  color: var(--headerLink);
 
   &:hover {
     color: var(--navigationHover);
