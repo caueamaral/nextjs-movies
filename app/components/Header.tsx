@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Image from "next/image";
+import Logo from "@/app/components/Logo";
 
 const HeaderContainer = styled.header`
   padding-inline: 24px;
@@ -23,13 +23,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <HeaderLimit>
-        <Image
-          src="/images/logo-movizone.svg"
-          alt="MoviZone logo"
-          width={154}
-          height={22}
-          priority
-        />
+        <Logo />
       </HeaderLimit>
     </HeaderContainer>
   );
