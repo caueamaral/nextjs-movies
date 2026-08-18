@@ -26,13 +26,13 @@ export default function Navigation() {
           <NavLink href="/tv-shows">TV Shows</NavLink>
         </li>
         <li>
-          <NavLink href="anime">Anime</NavLink>
+          <NavLink href="/anime">Anime</NavLink>
         </li>
         <li>
-          <NavLink href="series">Series</NavLink>
+          <NavLink href="/series">Series</NavLink>
         </li>
         <li>
-          <NavLink href="trending">Trending</NavLink>
+          <NavLink href="/trending">Trending</NavLink>
         </li>
       </List>
     </nav>
