@@ -10,7 +10,7 @@ const NavLink = styled(Link)`
   color: var(--headerLink);
 
   &:hover {
-    color: var(--navigationHover);
+    color: var(--headerNavigationHover);
   }
 `;
 

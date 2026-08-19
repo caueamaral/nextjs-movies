@@ -6,7 +6,7 @@
   --headerHeight: 76px;
   --headerMargin: 24px;
   --headerLink: #cbcbcb;
-  --navigationHover: #ff4c4c;
+  --headerNavigationHover: #ff4c4c;
 }
 
 body {
