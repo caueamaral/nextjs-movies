@@ -11,6 +11,7 @@ const GlobalLink = styled(Link)`
   border-radius: 5px;
   color: var(--headerLink);
   padding: 12px 25px;
+  transition: all 300ms;
 `;
 
 const LoginLink = styled(GlobalLink)`

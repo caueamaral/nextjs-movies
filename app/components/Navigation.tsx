@@ -8,6 +8,7 @@ const List = styled.ul`
 
 const NavLink = styled(Link)`
   color: var(--headerLink);
+  transition: color 300ms;
 
   &:hover {
     color: var(--headerNavigationHover);
