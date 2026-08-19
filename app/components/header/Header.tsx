@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Logo from "@/app/components/Logo";
-import Navigation from "@/app/components/Navigation";
-import Login from "@/app/components/Login";
+import Logo from "@/app/components/header/Logo";
+import Navigation from "@/app/components/header/Navigation";
+import Login from "@/app/components/header/Login";
 
 const HeaderContainer = styled.header`
   padding-inline: 24px;
