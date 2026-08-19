@@ -6,19 +6,20 @@ const List = styled.ul`
   gap: 17px;
 `;
 
-const LoginLink = styled(Link)`
-  border: 1px solid #fff;
+const GlobalLink = styled(Link)`
+  border: 1px solid;
   border-radius: 5px;
   color: var(--headerLink);
   padding: 12px 25px;
 `;
 
-const SignupLink = styled(Link)`
-  background: #9747ff;
-  border: 1px solid #9747ff;
-  border-radius: 5px;
-  color: var(--headerLink);
-  padding: 12px 25px;
+const LoginLink = styled(GlobalLink)`
+  border-color: #fff;
+`;
+
+const SignupLink = styled(GlobalLink)`
+  background: var(--headerLoginSignup);
+  border-color: var(--headerLoginSignup);
 `;
 
 export default function Login() {
