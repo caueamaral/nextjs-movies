@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Icon from "@/app/components/header/Icon";
 import Logo from "@/app/components/header/Logo";
 import Navigation from "@/app/components/header/Navigation";
 import Login from "@/app/components/header/Login";
@@ -16,6 +17,8 @@ const HeaderLimit = styled.div`
   display: flex;
 
   @media (max-width: 1099px) {
+    display: flex;
+    justify-content: space-between;
     padding: 25px;
   }
 
@@ -55,6 +58,7 @@ export default function Header() {
     <HeaderContainer>
       <HeaderLimit>
         <Logo />
+        <Icon />
         <Menu>
           <Navigation />
           <Login />
