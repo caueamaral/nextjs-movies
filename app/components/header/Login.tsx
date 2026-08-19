@@ -2,34 +2,42 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const List = styled.ul`
-  display: flex;
-  gap: 17px;
+  @media (min-width: 1100px) {
+    display: flex;
+    gap: 17px;
+  }
 `;
 
 const GlobalLink = styled(Link)`
-  border: 1px solid;
-  border-radius: 5px;
-  color: var(--headerLink);
-  padding: 12px 25px;
-  transition: all 300ms;
+  @media (min-width: 1100px) {
+    border: 1px solid;
+    border-radius: 5px;
+    color: var(--headerLink);
+    padding: 12px 25px;
+    transition: all 300ms;
+  }
 `;
 
 const LoginLink = styled(GlobalLink)`
-  border-color: var(--white);
+  @media (min-width: 1100px) {
+    border-color: var(--white);
 
-  &:hover {
-    background: var(--white);
-    color: var(--black);
+    &:hover {
+      background: var(--white);
+      color: var(--black);
+    }
   }
 `;
 
 const SignupLink = styled(GlobalLink)`
-  background: var(--headerLoginSignup);
-  border-color: var(--headerLoginSignup);
+  @media (min-width: 1100px) {
+    background: var(--headerLoginSignup);
+    border-color: var(--headerLoginSignup);
 
-  &:hover {
-    color: var(--white);
-    opacity: 0.9;
+    &:hover {
+      color: var(--white);
+      opacity: 0.9;
+    }
   }
 `;
 

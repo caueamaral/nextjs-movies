@@ -2,16 +2,20 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const List = styled.ul`
-  display: flex;
-  gap: 30px;
+  @media (min-width: 1100px) {
+    display: flex;
+    gap: 30px;
+  }
 `;
 
 const NavLink = styled(Link)`
-  color: var(--headerLink);
-  transition: color 300ms;
+  @media (min-width: 1100px) {
+    color: var(--headerLink);
+    transition: color 300ms;
 
-  &:hover {
-    color: var(--headerNavigationHover);
+    &:hover {
+      color: var(--headerNavigationHover);
+    }
   }
 `;
 
