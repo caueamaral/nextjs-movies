@@ -15,12 +15,22 @@ const GlobalLink = styled(Link)`
 `;
 
 const LoginLink = styled(GlobalLink)`
-  border-color: #fff;
+  border-color: var(--white);
+
+  &:hover {
+    background: var(--white);
+    color: var(--black);
+  }
 `;
 
 const SignupLink = styled(GlobalLink)`
   background: var(--headerLoginSignup);
   border-color: var(--headerLoginSignup);
+
+  &:hover {
+    color: var(--white);
+    opacity: 0.9;
+  }
 `;
 
 export default function Login() {
