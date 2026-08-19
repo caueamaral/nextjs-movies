@@ -3,11 +3,14 @@ import Image from "next/image";
 
 const BannerContainer = styled.section`
   aspect-ratio: 1440 / 572;
-  margin-top: calc((var(--headerHeight) + var(--headerMargin)) * -1);
   max-height: 600px;
   position: relative;
   overflow: hidden;
   width: 100%;
+
+  @media (min-width: 1100px) {
+    margin-top: calc((var(--headerHeight) + var(--headerMargin)) * -1);
+  }
 `;
 
 const BannerImage = styled(Image)`
