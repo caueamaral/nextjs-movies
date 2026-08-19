@@ -13,11 +13,15 @@ const HeaderContainer = styled.header`
 
 const HeaderLimit = styled.div`
   background: color-mix(in srgb, #151515 90%, transparent);
+  display: flex;
+
+  @media (max-width: 1099px) {
+    padding: 25px;
+  }
 
   @media (min-width: 1100px) {
     align-items: center;
     border-radius: 8px;
-    display: flex;
     justify-content: space-between;
     height: var(--headerHeight);
     margin-top: var(--headerMargin);
@@ -28,7 +32,19 @@ const HeaderLimit = styled.div`
   }
 `;
 
-const Menu = styled.div`
+const Menu = styled.section`
+  @media (max-width: 1099px) {
+    background: var(--background);
+    border-left: 1px solid var(--gray);
+    height: 100%;
+    padding-block: 52px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 200px;
+  }
+
   @media (min-width: 1100px) {
     display: contents;
   }
