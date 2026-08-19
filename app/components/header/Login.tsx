@@ -2,9 +2,11 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const Nav = styled.nav`
-  border-top: 1px solid var(--gray);
-  margin-top: 20px;
-  padding-top: 20px;
+  @media (max-width: 1099px) {
+    border-top: 1px solid var(--gray);
+    margin-top: 20px;
+    padding-top: 20px;
+  }
 `;
 
 const List = styled.ul`
