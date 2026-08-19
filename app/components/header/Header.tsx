@@ -28,13 +28,21 @@ const HeaderLimit = styled.div`
   }
 `;
 
+const Menu = styled.div`
+  @media (min-width: 1100px) {
+    display: contents;
+  }
+`;
+
 export default function Header() {
   return (
     <HeaderContainer>
       <HeaderLimit>
         <Logo />
-        <Navigation />
-        <Login />
+        <Menu>
+          <Navigation />
+          <Login />
+        </Menu>
       </HeaderLimit>
     </HeaderContainer>
   );
