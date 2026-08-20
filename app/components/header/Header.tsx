@@ -15,6 +15,7 @@ const HeaderLimit = styled.div`
   display: flex;
 
   @media (max-width: 1099px) {
+    align-items: center;
     display: flex;
     height: var(--headerHeight);
     justify-content: space-between;
