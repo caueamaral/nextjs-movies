@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styled from "styled-components";
-import Icon from "@/app/components/header/Icon";
+import HamburgerIcon from "@/app/components/header/HamburgerIcon";
 import Navigation from "@/app/components/header/Navigation";
 import Login from "@/app/components/header/Login";
 
@@ -34,7 +34,7 @@ export default function Menu() {
 
   return (
     <>
-      <Icon
+      <HamburgerIcon
         isMenuOpen={isMenuOpen}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       />

@@ -17,7 +17,7 @@ type IconProps = {
   onClick: () => void;
 };
 
-export default function Icon({ isMenuOpen, onClick }: IconProps) {
+export default function HamburgerIcon({ isMenuOpen, onClick }: IconProps) {
   return (
     <Button
       type="button"
