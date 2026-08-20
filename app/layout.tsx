@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import StyledComponentsRegistry from "@/lib/registry";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -14,7 +15,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={montserrat.className}>
-      <body>{children}</body>
+      <body>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
