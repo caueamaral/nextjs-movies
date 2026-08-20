@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import styled from "styled-components";
 import Icon from "@/app/components/header/Icon";
 import Logo from "@/app/components/header/Logo";
@@ -47,6 +50,10 @@ const Menu = styled.section`
     right: -100%;
     z-index: 1;
     width: 200px;
+
+    &.active {
+      right: 0;
+    }
   }
 
   @media (min-width: 1100px) {
@@ -55,12 +62,14 @@ const Menu = styled.section`
 `;
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <HeaderContainer>
       <HeaderLimit>
         <Logo />
-        <Icon />
-        <Menu>
+        <Icon onClick={() => setIsMenuOpen(!isMenuOpen)} />
+        <Menu className={isMenuOpen ? "active" : ""}>
           <Navigation />
           <Login />
         </Menu>
