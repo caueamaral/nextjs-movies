@@ -19,10 +19,14 @@ const Button = styled.button`
   }
 `;
 
-export default function CloseIcon() {
+type IconProps = {
+  onClick: () => void;
+};
+
+export default function CloseIcon({ onClick }: IconProps) {
   return (
     <Section>
-      <Button type="button" aria-label="Close menu">
+      <Button type="button" aria-label="Close menu" onClick={onClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

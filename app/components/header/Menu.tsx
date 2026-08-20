@@ -39,7 +39,7 @@ export default function Menu() {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
       <MenuContainer className={isMenuOpen ? "active" : ""}>
-        <CloseIcon />
+        <CloseIcon onClick={() => setIsMenuOpen(false)} />
         <Navigation />
         <Login />
       </MenuContainer>
