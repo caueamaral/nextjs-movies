@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import HamburgerIcon from "@/app/components/header/HamburgerIcon";
+import CloseIcon from "@/app/components/header/CloseIcon";
 import Navigation from "@/app/components/header/Navigation";
 import Login from "@/app/components/header/Login";
 
@@ -11,7 +12,6 @@ const MenuContainer = styled.section`
     background: var(--background);
     border-left: 1px solid var(--gray);
     height: 100%;
-    padding-block: 52px 20px;
     position: absolute;
     top: 0;
     transition: right 300ms;
@@ -39,6 +39,7 @@ export default function Menu() {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
       <MenuContainer className={isMenuOpen ? "active" : ""}>
+        <CloseIcon />
         <Navigation />
         <Login />
       </MenuContainer>

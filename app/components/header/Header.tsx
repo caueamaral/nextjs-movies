@@ -16,8 +16,9 @@ const HeaderLimit = styled.div`
 
   @media (max-width: 1099px) {
     display: flex;
+    height: var(--headerHeight);
     justify-content: space-between;
-    padding: 25px;
+    padding-inline: 25px;
   }
 
   @media (min-width: 1100px) {

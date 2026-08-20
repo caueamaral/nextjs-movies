@@ -1,14 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-const Nav = styled.nav`
-  @media (max-width: 1099px) {
-    border-top: 1px solid var(--gray);
-    margin-top: 20px;
-    padding-top: 20px;
-  }
-`;
-
 const List = styled.ul`
   @media (min-width: 1100px) {
     display: flex;
@@ -34,7 +26,7 @@ const NavLink = styled(Link)`
 
 export default function Navigation() {
   return (
-    <Nav>
+    <nav>
       <List>
         <li>
           <NavLink href="/">Home</NavLink>
@@ -55,6 +47,6 @@ export default function Navigation() {
           <NavLink href="/trending">Trending</NavLink>
         </li>
       </List>
-    </Nav>
+    </nav>
   );
 }
