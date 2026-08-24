@@ -46,8 +46,8 @@ const LoginLink = styled(GlobalLink)`
 
 const SignupLink = styled(GlobalLink)`
   @media (min-width: 1100px) {
-    background: var(--headerLoginSignup);
-    border-color: var(--headerLoginSignup);
+    background: var(--purple);
+    border-color: var(--purple);
 
     &:hover {
       color: var(--white);
