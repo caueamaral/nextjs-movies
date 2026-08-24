@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { bebas_neue } from "@/app/fonts/googleFonts";
 
 const Container = styled.section`
-  align-items: center;
-  aspect-ratio: 1440 / 572;
+  aspect-ratio: 1440 / 573;
   display: flex;
   justify-content: center;
   height: 573px;
@@ -17,8 +17,9 @@ const Container = styled.section`
 `;
 
 const BannerImage = styled(Image)`
-  height: auto;
+  aspect-ratio: 1440 / 573;
   left: 0;
+  min-height: 573px;
   position: absolute;
   top: 0;
   width: 100%;
@@ -26,16 +27,31 @@ const BannerImage = styled(Image)`
 
 const Limit = styled.div`
   background: #0005;
+  display: flex;
+  justify-content: space-between;
   margin-inline: var(--lateralMargin);
+  margin-top: calc(var(--headerHeight) + 100px);
   max-width: 1280px;
-  padding-inline: 27px;
   position: relative;
   width: 100%;
+`;
+
+const Info = styled.div`
+  max-width: 637px;
 `;
 
 const Title = styled.h1`
   font-size: 72px;
   text-transform: uppercase;
+`;
+
+const Thumb = styled.div`
+  background: #0009;
+  border: 2px solid var(--white);
+  border-radius: 16px;
+  flex-shrink: 0;
+  height: 266px;
+  width: 266px;
 `;
 
 export default function Banner() {
@@ -48,8 +64,10 @@ export default function Banner() {
         height={572}
       />
       <Limit>
-        <div>
-          <Title>Furiosa: A Mad Max Saga</Title>
+        <Info>
+          <Title className={bebas_neue.className}>
+            Furiosa: A Mad Max Saga
+          </Title>
           <p>
             In "Furiosa: A Mad Max Saga," the fierce warrior Furiosa embarks on
             a perilous journey through a post-apocalyptic wasteland, battling
@@ -58,8 +76,8 @@ export default function Banner() {
           <button type="button" aria-label="Watch Furiosa: A Mad Max Saga">
             Watch
           </button>
-        </div>
-        <div>Thumb</div>
+        </Info>
+        <Thumb>Thumb</Thumb>
       </Limit>
     </Container>
   );
