@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import StyledComponentsRegistry from "@/lib/registry";
-import { Montserrat } from "next/font/google";
+import { montserrat } from "@/app/fonts/googleFonts";
 import "./globals.css";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
