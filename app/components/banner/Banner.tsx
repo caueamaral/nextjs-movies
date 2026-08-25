@@ -26,7 +26,6 @@ const BannerImage = styled(Image)`
 `;
 
 const Limit = styled.div`
-  background: #0005;
   display: flex;
   justify-content: space-between;
   margin-inline: var(--lateralMargin);
@@ -37,12 +36,26 @@ const Limit = styled.div`
 `;
 
 const Info = styled.div`
-  max-width: 637px;
+  max-width: 700px;
 `;
 
 const Title = styled.h1`
   font-size: 72px;
+  line-height: 0.9em;
   text-transform: uppercase;
+`;
+
+const Text = styled.p`
+  font-size: 18px;
+  margin-top: 25px;
+`;
+
+const Button = styled.button`
+  background: var(--purple);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 60px;
+  padding: 15px 85px;
 `;
 
 const Thumb = styled.div`
@@ -68,14 +81,14 @@ export default function Banner() {
           <Title className={bebas_neue.className}>
             Furiosa: A Mad Max Saga
           </Title>
-          <p>
+          <Text>
             In "Furiosa: A Mad Max Saga," the fierce warrior Furiosa embarks on
             a perilous journey through a post-apocalyptic wasteland, battling
             ruthless enemies to reclaim her homeland.
-          </p>
-          <button type="button" aria-label="Watch Furiosa: A Mad Max Saga">
+          </Text>
+          <Button type="button" aria-label="Watch Furiosa: A Mad Max Saga">
             Watch
-          </button>
+          </Button>
         </Info>
         <Thumb>Thumb</Thumb>
       </Limit>
