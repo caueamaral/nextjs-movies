@@ -6,22 +6,28 @@ const Container = styled.section`
   aspect-ratio: 1440 / 573;
   display: flex;
   justify-content: center;
-  height: 573px;
   position: relative;
   overflow: hidden;
   width: 100%;
 
+  @media (max-width: 1099px) {
+    align-items: center;
+    height: 320px;
+  }
+
   @media (min-width: 1100px) {
+    height: 573px;
     margin-top: calc((var(--headerHeight) + var(--headerMargin)) * -1);
   }
 `;
 
 const BannerImage = styled(Image)`
-  aspect-ratio: 1440 / 573;
-  left: 0;
-  min-height: 573px;
+  height: 100%;
+  inset: 0;
+  margin: auto;
+  object-fit: cover;
+  object-position: top;
   position: absolute;
-  top: 0;
   width: 100%;
 `;
 
@@ -29,42 +35,75 @@ const Limit = styled.div`
   display: flex;
   justify-content: space-between;
   margin-inline: var(--lateralMargin);
-  margin-top: calc(var(--headerHeight) + 100px);
   max-width: 1280px;
   position: relative;
   width: 100%;
+
+  @media (min-width: 1100px) {
+    margin-top: calc(var(--headerHeight) + 100px);
+  }
 `;
 
 const Info = styled.div`
-  max-width: 700px;
+  @media (min-width: 1100px) {
+    max-width: 700px;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 72px;
   line-height: 0.9em;
   text-transform: uppercase;
+
+  @media (max-width: 1099px) {
+    font-size: 35px;
+  }
+
+  @media (min-width: 1100px) {
+    font-size: 72px;
+  }
 `;
 
 const Text = styled.p`
-  font-size: 18px;
-  margin-top: 25px;
+  @media (max-width: 1099px) {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  @media (min-width: 1100px) {
+    font-size: 18px;
+    margin-top: 25px;
+  }
 `;
 
 const Button = styled.button`
   background: var(--purple);
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 60px;
-  padding: 15px 85px;
+
+  @media (max-width: 1099px) {
+    margin-top: 20px;
+    padding: 12px 60px;
+  }
+
+  @media (min-width: 1100px) {
+    margin-top: 60px;
+    padding: 15px 85px;
+  }
 `;
 
 const Thumb = styled.div`
-  background: #0009;
-  border: 2px solid var(--white);
-  border-radius: 16px;
-  flex-shrink: 0;
-  height: 266px;
-  width: 266px;
+  @media (max-width: 1099px) {
+    display: none;
+  }
+
+  @media (min-width: 1100px) {
+    background: #0009;
+    border: 2px solid var(--white);
+    border-radius: 16px;
+    flex-shrink: 0;
+    height: 266px;
+    width: 266px;
+  }
 `;
 
 export default function Banner() {
