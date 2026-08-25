@@ -7,4 +7,5 @@ export const bebas_neue = Bebas_Neue({
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
