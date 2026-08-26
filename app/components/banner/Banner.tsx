@@ -212,7 +212,7 @@ export default async function Banner() {
             height={267}
           />
           <BoxPlay aria-label="Play Furiosa: A Mad Max Saga trailer" />
-          <BoxScore>8.0</BoxScore>
+          <BoxScore>{Math.floor(movie.vote_average)}</BoxScore>
         </Box>
       </Limit>
     </Container>

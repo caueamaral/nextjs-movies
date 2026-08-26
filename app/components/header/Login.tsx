@@ -61,10 +61,10 @@ export default function Login() {
     <Nav>
       <List>
         <li>
-          <LoginLink href="/login">Login</LoginLink>
+          <LoginLink href="/">Login</LoginLink>
         </li>
         <li>
-          <SignupLink href="/signup">Sign up</SignupLink>
+          <SignupLink href="/">Sign up</SignupLink>
         </li>
       </List>
     </Nav>
