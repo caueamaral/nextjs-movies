@@ -189,7 +189,15 @@ export default async function Banner() {
     return Math.trunc(value * 10) / 10;
   }
 
-  const base_url = "https://image.tmdb.org/t/p/original";
+  function getImageFullUrl(
+    url: string,
+    file_size: string = "original",
+  ): string {
+    const base_url = "https://image.tmdb.org/t/p/";
+
+    return base_url + file_size + url;
+  }
+
   const data = await response.json();
   const results: Movie[] = data.results;
   const movie = results[0];
@@ -201,7 +209,7 @@ export default async function Banner() {
   return (
     <Container>
       <BannerImage
-        src={base_url + movie.backdrop_path}
+        src={getImageFullUrl(movie.backdrop_path)}
         alt="Banner"
         width={1440}
         height={572}
@@ -216,7 +224,7 @@ export default async function Banner() {
         </Info>
         <Box>
           <BoxImage
-            src={base_url + movie.poster_path}
+            src={getImageFullUrl(movie.poster_path, "w300")}
             alt="Box"
             width={267}
             height={267}
