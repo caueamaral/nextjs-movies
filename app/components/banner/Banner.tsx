@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
+import truncateToOneDecimal from "@/app/utils/truncateToOneDecimal";
+import getImageUrl from "@/app/utils/getImageUrl";
 import { bebas_neue } from "@/app/fonts/googleFonts";
 import type { Movie } from "@/app/types/movie";
 
@@ -185,19 +187,6 @@ export default async function Banner() {
     options,
   );
 
-  function truncateToOneDecimal(value: number): number {
-    return Math.trunc(value * 10) / 10;
-  }
-
-  function getImageFullUrl(
-    url: string,
-    file_size: string = "original",
-  ): string {
-    const base_url = "https://image.tmdb.org/t/p/";
-
-    return base_url + file_size + url;
-  }
-
   const data = await response.json();
   const results: Movie[] = data.results;
   const movie = results[0];
@@ -209,7 +198,7 @@ export default async function Banner() {
   return (
     <Container>
       <BannerImage
-        src={getImageFullUrl(movie.backdrop_path)}
+        src={getImageUrl(movie.backdrop_path)}
         alt="Banner"
         width={1440}
         height={572}
@@ -224,7 +213,7 @@ export default async function Banner() {
         </Info>
         <Box>
           <BoxImage
-            src={getImageFullUrl(movie.poster_path, "w300")}
+            src={getImageUrl(movie.poster_path, "w300")}
             alt="Box"
             width={267}
             height={267}
