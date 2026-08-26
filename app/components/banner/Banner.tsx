@@ -185,13 +185,17 @@ export default async function Banner() {
     options,
   );
 
+  function truncateToOneDecimal(value: number): number {
+    return Math.trunc(value * 10) / 10;
+  }
+
   const base_url = "https://image.tmdb.org/t/p/original";
   const data = await response.json();
   const results: Movie[] = data.results;
   const movie = results[0];
 
-  function truncateToOneDecimal(value: number): number {
-    return Math.trunc(value * 10) / 10;
+  if (!movie) {
+    return;
   }
 
   return (
