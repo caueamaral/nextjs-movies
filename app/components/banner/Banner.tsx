@@ -188,6 +188,10 @@ export default async function Banner() {
   const base_url = "https://image.tmdb.org/t/p/original";
   const movie = data.results[0];
 
+  function truncateToOneDecimal(value: number): number {
+    return Math.trunc(value * 10) / 10;
+  }
+
   return (
     <Container>
       <BannerImage
@@ -212,7 +216,7 @@ export default async function Banner() {
             height={267}
           />
           <BoxPlay aria-label="Play Furiosa: A Mad Max Saga trailer" />
-          <BoxScore>{Math.floor(movie.vote_average)}</BoxScore>
+          <BoxScore>{truncateToOneDecimal(movie.vote_average)}</BoxScore>
         </Box>
       </Limit>
     </Container>
