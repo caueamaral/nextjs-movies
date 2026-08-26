@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { bebas_neue } from "@/app/fonts/googleFonts";
+import type { Movie } from "@/app/types/movie";
 
 const Container = styled.section`
   aspect-ratio: 1440 / 574;
@@ -106,7 +107,7 @@ const Button = styled.button`
 
   @media (max-width: 1099px) {
     margin-top: 20px;
-    padding: 12px 60px;
+    padding: 12px 70px;
   }
 
   @media (min-width: 1100px) {
@@ -184,9 +185,10 @@ export default async function Banner() {
     options,
   );
 
-  const data = await response.json();
   const base_url = "https://image.tmdb.org/t/p/original";
-  const movie = data.results[0];
+  const data = await response.json();
+  const results: Movie[] = data.results;
+  const movie = results[0];
 
   function truncateToOneDecimal(value: number): number {
     return Math.trunc(value * 10) / 10;

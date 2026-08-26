@@ -16,7 +16,7 @@ const MenuContainer = styled.section`
     top: 0;
     transition: right 300ms;
     right: -100%;
-    z-index: 1;
+    z-index: 2;
     width: 200px;
 
     &.active {
