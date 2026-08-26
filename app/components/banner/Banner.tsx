@@ -198,7 +198,7 @@ export default async function Banner() {
   return (
     <Container>
       <BannerImage
-        src={getImageUrl(movie.backdrop_path)}
+        src={getImageUrl(movie.backdrop_path) ?? "/images/banner.jpg"}
         alt="Banner"
         width={1440}
         height={572}
@@ -213,7 +213,7 @@ export default async function Banner() {
         </Info>
         <Box>
           <BoxImage
-            src={getImageUrl(movie.poster_path, "w300")}
+            src={getImageUrl(movie.poster_path, "w300") ?? "/images/banner-box.jpg"}
             alt="Box"
             width={267}
             height={267}

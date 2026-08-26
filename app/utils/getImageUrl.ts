@@ -1,8 +1,7 @@
 export default function getImageUrl(
-  path: string,
+  path: string | null,
   size: string = "original",
-): string {
-  const base_url = "https://image.tmdb.org/t/p/";
-
-  return base_url + size + path;
+): string | null {
+  if (!path) return null;
+  return `https://image.tmdb.org/t/p/${size}${path}`;
 }
