@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   images: {
-    remotePatterns: [new URL("http://image.tmdb.org/**")],
+    remotePatterns: [new URL("https://image.tmdb.org/**")],
   },
 };
 

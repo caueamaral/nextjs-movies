@@ -178,15 +178,13 @@ export default async function Banner() {
   );
 
   const data = await response.json();
-  const base_url = "http://image.tmdb.org/";
-  const file_size = "t/p/original";
-
+  const base_url = "https://image.tmdb.org/t/p/original";
   const movie = data.results[0];
 
   return (
     <Container>
       <BannerImage
-        src={base_url + file_size + movie.backdrop_path}
+        src={base_url + movie.backdrop_path}
         alt="Banner"
         width={1440}
         height={572}
@@ -201,7 +199,7 @@ export default async function Banner() {
         </Info>
         <Box>
           <BoxImage
-            src={base_url + file_size + movie.poster_path}
+            src={base_url + movie.poster_path}
             alt="Box"
             width={267}
             height={267}
