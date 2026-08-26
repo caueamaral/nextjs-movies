@@ -163,32 +163,45 @@ const BoxScore = styled.div`
   width: 64px;
 `;
 
-export default function Banner() {
+export default async function Banner() {
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${process.env.API_READ_ACCESS_TOKEN}`,
+    },
+  };
+
+  const response = await fetch(
+    "https://api.themoviedb.org/3/discover/movie",
+    options,
+  );
+
+  const data = await response.json();
+  const base_url = "http://image.tmdb.org/";
+  const file_size = "t/p/original";
+
+  const movie = data.results[0];
+
   return (
     <Container>
       <BannerImage
-        src="/images/banner.jpg"
+        src={base_url + file_size + movie.backdrop_path}
         alt="Banner"
         width={1440}
         height={572}
       />
       <Limit>
         <Info>
-          <Title className={bebas_neue.className}>
-            Furiosa: A Mad Max Saga
-          </Title>
-          <Text>
-            In "Furiosa: A Mad Max Saga," the fierce warrior Furiosa embarks on
-            a perilous journey through a post-apocalyptic wasteland, battling
-            ruthless enemies to reclaim her homeland.
-          </Text>
+          <Title className={bebas_neue.className}>{movie.title}</Title>
+          <Text>{movie.overview}</Text>
           <Button type="button" aria-label="Watch Furiosa: A Mad Max Saga">
             Watch
           </Button>
         </Info>
         <Box>
           <BoxImage
-            src="/images/banner-box.jpg"
+            src={base_url + file_size + movie.poster_path}
             alt="Box"
             width={267}
             height={267}
