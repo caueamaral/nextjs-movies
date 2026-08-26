@@ -80,6 +80,13 @@ const Title = styled.h1`
 `;
 
 const Text = styled.p`
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  display: -webkit-box;
+  line-clamp: 6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   @media (max-width: 1099px) {
     font-size: 14px;
     margin-top: 15px;
