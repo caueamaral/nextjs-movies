@@ -213,7 +213,9 @@ export default async function Banner() {
         </Info>
         <Box>
           <BoxImage
-            src={getImageUrl(movie.poster_path, "w300") ?? "/images/banner-box.jpg"}
+            src={
+              getImageUrl(movie.poster_path, "w300") ?? "/images/banner-box.jpg"
+            }
             alt="Box"
             width={267}
             height={267}
