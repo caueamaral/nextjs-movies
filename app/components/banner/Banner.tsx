@@ -185,21 +185,21 @@ export default async function Banner() {
   );
 
   const data = await response.json();
-  const results: Movie[] = data.results;
+  const results: Movie[] = data.results ?? [];
   const movie = results[0];
 
   if (!movie) {
     return;
   }
 
+  const backdrop = getImageUrl(movie.backdrop_path);
+  const poster = getImageUrl(movie.poster_path, "w300");
+
   return (
     <Container>
-      <BannerImage
-        src={getImageUrl(movie.backdrop_path) ?? "/images/banner.jpg"}
-        alt="Banner"
-        width={1440}
-        height={572}
-      />
+      {backdrop && (
+        <BannerImage src={backdrop} alt="Banner" width={1440} height={572} />
+      )}
       <Limit>
         <Info>
           <Title className={bebas_neue.className}>{movie.title}</Title>
@@ -209,14 +209,9 @@ export default async function Banner() {
           </Button>
         </Info>
         <Box>
-          <BoxImage
-            src={
-              getImageUrl(movie.poster_path, "w300") ?? "/images/banner-box.jpg"
-            }
-            alt="Box"
-            width={267}
-            height={267}
-          />
+          {poster && (
+            <BoxImage src={poster} alt="Box" width={267} height={267} />
+          )}
           <BoxPlay aria-label="Play Furiosa: A Mad Max Saga trailer" />
           <BoxScore>{truncateToOneDecimal(movie.vote_average)}</BoxScore>
         </Box>
