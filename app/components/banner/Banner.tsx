@@ -4,7 +4,6 @@ import truncateToOneDecimal from "@/app/utils/truncateToOneDecimal";
 import getImageUrl from "@/app/utils/getImageUrl";
 import getNewMovie from "@/app/services/getNewMovie";
 import { bebas_neue } from "@/app/fonts/googleFonts";
-import type { Movie } from "@/app/types/movie";
 
 const Container = styled.section`
   aspect-ratio: 1440 / 574;

@@ -1,3 +1,5 @@
+import type { Movie } from "@/app/types/movie";
+
 export default async function getNewMovie() {
   const options = {
     method: "GET",
