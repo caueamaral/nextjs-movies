@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import truncateToOneDecimal from "@/app/utils/truncateToOneDecimal";
 import getImageUrl from "@/app/utils/getImageUrl";
+import getNewMovie from "@/app/services/getNewMovie";
 import { bebas_neue } from "@/app/fonts/googleFonts";
 import type { Movie } from "@/app/types/movie";
 
@@ -171,22 +172,7 @@ const BoxScore = styled.div`
 `;
 
 export default async function Banner() {
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `Bearer ${process.env.API_READ_ACCESS_TOKEN}`,
-    },
-  };
-
-  const response = await fetch(
-    "https://api.themoviedb.org/3/discover/movie",
-    options,
-  );
-
-  const data = await response.json();
-  const results: Movie[] = data.results ?? [];
-  const movie = results[0];
+  const movie = await getNewMovie();
 
   if (!movie) {
     return;
